@@ -139,6 +139,7 @@ Get Live Weather: Enter a city name and click "Get Weather" to fetch real-time d
 Get Crop Recommendation: Input your soil type, expected rainfall, and soil pH. Click "Recommend Crop" to get an AI-powered suggestion.
 
 Get Farming Advice: After a crop is recommended, an expandable section will appear. Click on it to view detailed advice on fertilizers, pesticides, and soil pH management for that specific crop. A history of your last 5 predictions will also be displayed on this page.
+You can try the website from the given link also :-https://api.dharmik49.codes/
 
 4. Chatbot Page: Krishi Mitra
 Navigate to the "Chatbot" page using the sidebar.
@@ -146,3 +147,4 @@ Navigate to the "Chatbot" page using the sidebar.
 Ask any farming-related question in English, Hindi, or Gujarati.
 
 The chatbot will respond in the same language and remember your conversation history, which is saved to your account.
+
