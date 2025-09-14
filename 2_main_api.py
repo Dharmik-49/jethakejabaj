@@ -20,8 +20,8 @@ app = FastAPI(
 
 # --- API Key Configuration ---
 # IMPORTANT: Paste your secret keys here before running the server.
-OPENWEATHER_API_KEY = "4a26316df0392e19d8cf8b49fba8ed8b"
-GEMINI_API_KEY = "AIzaSyAheQfS5BucQ-Nr2I45LnckaMhkwT8QoGw"
+OPENWEATHER_API_KEY = "ADD YOUR API"
+GEMINI_API_KEY = "ADD YOUR API"
 
 
 # --- Pydantic Models for Data Validation ---
@@ -210,4 +210,5 @@ async def detect_disease(
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=5000)
+
 
