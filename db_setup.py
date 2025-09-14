@@ -28,6 +28,18 @@ def create_tables():
     )
     """)
     
+    # --- NEW: Create prediction_history table ---
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS prediction_history (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        inputs TEXT NOT NULL,
+        recommended_crop TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users (id)
+    )
+    """)
+    
     conn.commit()
     conn.close()
     print("Database and tables created successfully.")
