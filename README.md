@@ -22,6 +22,8 @@ Soil pH Management: Gives specific instructions on how to raise or lower soil pH
 
 📝 Personalized Chat History: The chatbot automatically saves and loads conversation history for each logged-in user, providing a continuous experience.
 
+📊 Prediction History: Automatically saves the last 5 crop predictions for each user, allowing them to review past inputs and results.
+
 🌐 Multi-Language UI: The entire user interface can be dynamically switched between English, Hindi, and Gujarati.
 
 📱 Mobile-Responsive Design: The UI is built with Streamlit and enhanced with custom CSS to be fully functional and user-friendly on both desktop and mobile devices.
@@ -136,7 +138,7 @@ Get Live Weather: Enter a city name and click "Get Weather" to fetch real-time d
 
 Get Crop Recommendation: Input your soil type, expected rainfall, and soil pH. Click "Recommend Crop" to get an AI-powered suggestion.
 
-Get Farming Advice: After a crop is recommended, an expandable section will appear. Click on it to view detailed advice on fertilizers, pesticides, and soil pH management for that specific crop.
+Get Farming Advice: After a crop is recommended, an expandable section will appear. Click on it to view detailed advice on fertilizers, pesticides, and soil pH management for that specific crop. A history of your last 5 predictions will also be displayed on this page.
 
 4. Chatbot Page: Krishi Mitra
 Navigate to the "Chatbot" page using the sidebar.
