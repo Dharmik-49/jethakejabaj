@@ -30,11 +30,21 @@ LANGUAGES = {
         "recommend_crop_button": "Recommend Crop",
         "advice_header": "💡 Step 3: Get Farming Advice",
         "get_advice_button": "Get Complete Advice for {crop}",
+        "history_header": "🕰️ Recent Predictions",
+        "history_no_predictions": "You have no past predictions yet.",
+        "history_inputs_label": "Inputs:",
 
         # Chatbot Page
         "chatbot_title": "🤖 Krishi Mitra Chatbot",
         "chatbot_intro": "Ask me anything about farming in English, हिंदी, or ગુજરાતી!",
-        "chat_input_placeholder": "What is your question?"
+        "chat_input_placeholder": "What is your question?",
+
+        # Disease Detector Page
+        "detector_title": "🌿 Plant Disease Detector",
+        "detector_intro": "Upload a photo of a plant leaf to get an instant AI-powered diagnosis.",
+        "detector_uploader_label": "Upload your image here:",
+        "detector_button": "Diagnose Plant",
+        "detector_result_header": "🔍 Diagnosis Result:"
     },
     "हिंदी": {
         # Login Page
@@ -65,11 +75,21 @@ LANGUAGES = {
         "recommend_crop_button": "फसल की सिफारिश करें",
         "advice_header": "💡 चरण 3: खेती की सलाह प्राप्त करें",
         "get_advice_button": "{crop} के लिए पूरी सलाह प्राप्त करें",
+        "history_header": "🕰️ हाल की भविष्यवाणियां",
+        "history_no_predictions": "आपके पास अभी तक कोई पिछली भविष्यवाणी नहीं है।",
+        "history_inputs_label": "इनपुट:",
 
         # Chatbot Page
         "chatbot_title": "🤖 कृषि मित्र चैटबॉट",
         "chatbot_intro": "मुझसे खेती के बारे में कुछ भी पूछें (अंग्रेजी, हिंदी, या गुजराती में)!",
-        "chat_input_placeholder": "आपका क्या प्रश्न है?"
+        "chat_input_placeholder": "आपका क्या प्रश्न है?",
+
+        # Disease Detector Page
+        "detector_title": "🌿 पादप रोग डिटेक्टर",
+        "detector_intro": "तुरंत AI-संचालित निदान प्राप्त करने के लिए पौधे के पत्ते की तस्वीर अपलोड करें।",
+        "detector_uploader_label": "अपनी छवि यहां अपलोड करें:",
+        "detector_button": "पौधे का निदान करें",
+        "detector_result_header": "🔍 निदान का परिणाम:"
     },
     "ગુજરાતી": {
         # Login Page
@@ -100,10 +120,20 @@ LANGUAGES = {
         "recommend_crop_button": "પાકની ભલામણ કરો",
         "advice_header": "💡 પગલું 3: ખેતીની સલાહ મેળવો",
         "get_advice_button": "{crop} માટે સંપૂર્ણ સલાહ મેળવો",
+        "history_header": "🕰️ તાજેતરની આગાહીઓ",
+        "history_no_predictions": "તમારી પાસે હજુ સુધી કોઈ ભૂતકાળની આગાહીઓ નથી.",
+        "history_inputs_label": "ઇનપુટ્સ:",
 
         # Chatbot Page
         "chatbot_title": "🤖 કૃષિ મિત્ર ચેટબોટ",
         "chatbot_intro": "મને ખેતી વિશે અંગ્રેજી, हिंदी, અથવા ગુજરાતીમાં કંઈપણ પૂછો!",
-        "chat_input_placeholder": "તમારો પ્રશ્ન શું છે?"
+        "chat_input_placeholder": "તમારો પ્રશ્ન શું છે?",
+
+        # Disease Detector Page
+        "detector_title": "🌿 છોડના રોગ શોધક",
+        "detector_intro": "ત્વરિત AI-સંચાલિત નિદાન મેળવવા માટે છોડના પાંદડાનો ફોટો અપલોડ કરો.",
+        "detector_uploader_label": "તમારી છબી અહીં અપલોડ કરો:",
+        "detector_button": "છોડનું નિદાન કરો",
+        "detector_result_header": "🔍 નિદાનનું પરિણામ:"
     }
 }
