@@ -1,6 +1,7 @@
 # db_utils.py
 import sqlite3
 from passlib.context import CryptContext
+import json
 
 DB_NAME = "user_data.db"
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -25,7 +26,7 @@ def add_user(name, email, password):
         )
         conn.commit()
         return True
-    except sqlite3.IntegrityError: # This error occurs if the email is already registered
+    except sqlite3.IntegrityError:
         return False
     finally:
         conn.close()
@@ -60,5 +61,39 @@ def load_chat_history(user_id):
         (user_id,)
     ).fetchall()
     conn.close()
-    # Convert from list of sqlite3.Row to list of dict
     return [{"role": row['role'], "parts": [row['parts']]} for row in history]
+
+# --- NEW: Functions for Prediction History ---
+def save_prediction(user_id, inputs_dict, recommended_crop):
+    """Saves a new prediction and ensures only the last 5 are kept."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Get all prediction IDs for the user, ordered from oldest to newest
+    cursor.execute("SELECT id FROM prediction_history WHERE user_id = ? ORDER BY timestamp ASC", (user_id,))
+    history_ids = [row['id'] for row in cursor.fetchall()]
+    
+    # If there are 5 or more, delete the oldest one
+    if len(history_ids) >= 5:
+        oldest_id = history_ids[0]
+        cursor.execute("DELETE FROM prediction_history WHERE id = ?", (oldest_id,))
+    
+    # Insert the new prediction
+    inputs_json = json.dumps(inputs_dict)
+    cursor.execute(
+        "INSERT INTO prediction_history (user_id, inputs, recommended_crop) VALUES (?, ?, ?)",
+        (user_id, inputs_json, recommended_crop)
+    )
+    conn.commit()
+    conn.close()
+
+def load_prediction_history(user_id):
+    """Loads the last 5 predictions for a user, ordered by most recent."""
+    conn = get_db_connection()
+    history = conn.execute(
+        "SELECT inputs, recommended_crop, timestamp FROM prediction_history WHERE user_id = ? ORDER BY timestamp DESC",
+        (user_id,)
+    ).fetchall()
+    conn.close()
+    # Parse the JSON string back into a dictionary for each row
+    return [{"inputs": json.loads(row['inputs']), "recommended_crop": row['recommended_crop'], "timestamp": row['timestamp']} for row in history]
