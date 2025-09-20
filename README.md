@@ -147,6 +147,5 @@ Ask any farming-related question in English, Hindi, or Gujarati.
 
 The chatbot will respond in the same language and remember your conversation history, which is saved to your account.
 
-You can try the website from the given link also :-https://api.dharmik49.codes/
 
 
